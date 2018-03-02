@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/display_setup">
+
+    <PreferenceCategory android:title="@string/display_setup">
+    <!-- TV -->
+    <com.goke.settings.preference.DisplayListPreference android:key="@string/tv"
+        android:title="@string/dpi"
+        android:dialogTitle="@string/dpi"
+        android:entries="@array/set_video_tv_list"
+        android:entryValues="@array/set_video_tv_list_value"
+        android:defaultValue="0" />
+    <com.goke.settings.preference.ScopeRangePreference
+        android:key="scope"
+        android:title="@string/screen_scope"
+        />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="一顶">
+        <!-- TV -->
+        <com.goke.settings.preference.DisplayListPreference android:key="@string/tv"
+            android:title="@string/dpi"
+            android:dialogTitle="@string/dpi"
+            android:entries="@array/set_video_tv_list"
+            android:entryValues="@array/set_video_tv_list_value"
+            android:defaultValue="0" />
+        <com.goke.settings.preference.ScopeRangePreference
+            android:key="scope"
+            android:title="@string/screen_scope"
+            />
+        <com.goke.settings.preference.MyPreference
+            android:key="test"
+            android:title="12345"/>
+    </PreferenceCategory>
+</PreferenceScreen>

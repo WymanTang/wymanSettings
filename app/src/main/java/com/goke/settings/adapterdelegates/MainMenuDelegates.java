@@ -15,10 +15,9 @@ import com.example.gokeandroidlibrary.adapterdelegates.AdapterDelegate;
 import com.example.gokeandroidlibrary.kjframe.SupportActivity;
 import com.example.gokeandroidlibrary.myclass.DisplayableItem;
 import com.example.gokeandroidlibrary.myclass.IconAnd2Text;
-import com.goke.settings.Main2Activity;
+import com.goke.settings.activity.DisplaySetupActivity;
 import com.goke.settings.R;
 import com.goke.settings.displayActivity;
-import com.goke.settings.netSettingActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +30,8 @@ public class MainMenuDelegates extends AdapterDelegate<List<DisplayableItem>> {
     private LayoutInflater layoutInflater;
     private static List<DisplayableItem> mLists = new ArrayList<>();
     private SupportActivity activity;
-    int wholeWidth;
-    int wholeHeight;
+    private int wholeWidth;
+    private int wholeHeight;
 
     public MainMenuDelegates(SupportActivity activity) {
         this.activity = activity;
@@ -60,7 +59,7 @@ public class MainMenuDelegates extends AdapterDelegate<List<DisplayableItem>> {
         }
 
         final MainMenuViewHolder viewHolder = new MainMenuViewHolder(layoutInflater.inflate(R.layout.menu_main_rec_item, parent, false));
-        /**viewHolder.linearLayout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        /*viewHolder.linearLayout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if(hasFocus){
@@ -78,10 +77,10 @@ public class MainMenuDelegates extends AdapterDelegate<List<DisplayableItem>> {
                 int position;
                 position = viewHolder.getAdapterPosition();
                 IconAnd2Text iconAnd2Text = (IconAnd2Text) mLists.get(position);
-                if(iconAnd2Text.getTextToShow().equals("网络设置")){
-                    activity.showActivity(activity, Main2Activity.class);
-                }
                 if(iconAnd2Text.getTextToShow().equals("图像设置")){
+                    activity.showActivity(activity, DisplaySetupActivity.class);
+                }
+                if(iconAnd2Text.getTextToShow().equals("网络设置")){
                     activity.showActivity(activity, displayActivity.class);
                 }
                 if(iconAnd2Text.getTextToShow().equals("历史记录")){

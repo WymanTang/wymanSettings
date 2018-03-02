@@ -1,17 +1,15 @@
-package com.goke.settings;
+package com.goke.settings.activity;
 
-import android.app.Activity;
 import android.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.example.gokeandroidlibrary.kjframe.SupportActivity;
+import com.goke.settings.R;
+import com.goke.settings.fragment.DisplaySetupFragment;
 
-public class Main2Activity extends SupportActivity {
+public class DisplaySetupActivity extends SupportActivity {
     @Override
     public void setRootView() {
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_display_setup);
     }
 
     @Override
@@ -24,7 +22,7 @@ public class Main2Activity extends SupportActivity {
         super.initWidget();
         FragmentManager fragmentManager = getFragmentManager();
         android.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.settingFragment,new SettingFragment());
+        transaction.replace(R.id.settingFragment,new DisplaySetupFragment());
         transaction.commit();
     }
 }

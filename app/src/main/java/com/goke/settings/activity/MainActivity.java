@@ -1,24 +1,15 @@
-package com.goke.settings;
+package com.goke.settings.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
-import android.content.pm.PackageManager;
 import android.graphics.Rect;
-import android.media.MediaPlayer;
-import android.os.Build;
-import android.support.annotation.LayoutRes;
 import android.support.percent.PercentRelativeLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +17,7 @@ import com.example.gokeandroidlibrary.kjframe.SupportActivity;
 import com.example.gokeandroidlibrary.kjframe.ui.BindView;
 import com.example.gokeandroidlibrary.myclass.DisplayableItem;
 import com.example.gokeandroidlibrary.myclass.IconAnd2Text;
+import com.goke.settings.R;
 import com.goke.settings.adapter.MainAdapter;
 
 import java.util.ArrayList;
@@ -53,8 +45,8 @@ public class MainActivity extends SupportActivity {
     @Override
     public void initData() {
         super.initData();
-        menuList.add(new IconAnd2Text(R.drawable.ic_netsetting,"网络设置",""));
         menuList.add(new IconAnd2Text(R.drawable.ic_videosetting,"图像设置",""));
+        menuList.add(new IconAnd2Text(R.drawable.ic_netsetting,"网络设置",""));
         menuList.add(new IconAnd2Text(R.drawable.ic_audiosetting,"声音设置",""));
         menuList.add(new IconAnd2Text(R.drawable.ic_systeminfo,"系统信息",""));
     }
@@ -97,7 +89,7 @@ public class MainActivity extends SupportActivity {
                 }else {
                     Rect viewRectOld = new Rect();
                     oldFocus.getGlobalVisibleRect(viewRectOld);
-                    ViewWrapper focusViewWrapper = new ViewWrapper(mainMenuFocus);
+                    FocusViewWrapper focusViewWrapper = new FocusViewWrapper(mainMenuFocus);
                     AnimatorSet animatorSet = new AnimatorSet();
                     animatorSet.playTogether(
                             ObjectAnimator.ofInt(focusViewWrapper,"TopMargin",viewRectOld.top + 11 ,viewRect.top + 11),
@@ -110,15 +102,10 @@ public class MainActivity extends SupportActivity {
         });
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        return super.onKeyDown(keyCode, event);
-    }
-
-    private class ViewWrapper {
+    private class FocusViewWrapper {
         ImageView target;
 
-        public ViewWrapper(View v) {
+        private FocusViewWrapper(View v) {
             if(v instanceof ImageView){
                 target = (ImageView)v;
             }

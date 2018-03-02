@@ -7,6 +7,9 @@ import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.goke.settings.R;
 import com.hisilicon.android.hidisplaymanager.HiDisplayManager;
@@ -21,7 +24,6 @@ public class DisplayListPreference extends ListPreference {
 
     public DisplayListPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         mDisplayManager = new HiDisplayManager();
         if (mDisplayManager.getDisplayDeviceType() <= 1) { //tv case: 0 is av, 1 is hdmi
             mEntries = context.getResources()

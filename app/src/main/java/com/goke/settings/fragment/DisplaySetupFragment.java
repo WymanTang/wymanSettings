@@ -1,4 +1,4 @@
-package com.goke.settings;
+package com.goke.settings.fragment;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.support.annotation.Nullable;
@@ -17,6 +16,7 @@ import android.view.KeyEvent;
 import android.widget.Toast;
 
 import com.example.gokeandroidlibrary.utils.LogUtil;
+import com.goke.settings.R;
 import com.goke.settings.preference.DisplayListPreference;
 import com.hisilicon.android.hidisplaymanager.HiDisplayManager;
 import com.hisilicon.android.hisysmanager.HiSysManager;
@@ -24,7 +24,7 @@ import com.hisilicon.android.hisysmanager.HiSysManager;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class SettingFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener{
+public class DisplaySetupFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener{
     private DisplayListPreference formatList;//TV format list preference object.
     private HiDisplayManager display_manager;
     private Context mContext;
@@ -52,13 +52,14 @@ public class SettingFragment extends PreferenceFragment implements Preference.On
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.display_setting);
+        addPreferencesFromResource(R.xml.display_setup);
         display_manager = new HiDisplayManager();
         formatList = (DisplayListPreference) findPreference(getString(R.string.tv));
         formatList.setOnPreferenceChangeListener(this);
         formatList.setValue(String.valueOf(display_manager.getFmt()));
         mContext = getActivity();
     }
+
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {

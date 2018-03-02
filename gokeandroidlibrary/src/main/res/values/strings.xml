@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidUtils</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ngb_start_freq">开始频点</string>
+    <string name="ngb_end_freq">结束频点</string>
+    <string name="ngb_symbolrate">符号率（KS/s）</string>
+    <string name="ngb_tune_type">调制方式</string>
+    <string name="ngb_signal_level">信号等级</string>
+    <string name="ngb_signal_quality">信号强度</string>
+    <string name="settings">设置</string>
+</resources>

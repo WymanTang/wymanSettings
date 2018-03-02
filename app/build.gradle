@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.goke.settings"
+        minSdkVersion 22
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':gokeandroidlibrary')
+    compile files('libs/aip-java-sdk-3.3.2.jar')
+    implementation files('libs/json-20160810.jar')
+    implementation files('libs/HiDisplayManager.jar')
+    implementation files('libs/framework.jar')
+}

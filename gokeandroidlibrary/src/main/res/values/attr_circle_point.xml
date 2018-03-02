@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CirclePoint">
+        <attr name="CirclePointNum" format="integer"/> //小圆环个数
+        <attr name="CirclePointStrokeWidth" format="float"/> //小圆环描线宽度
+        <attr name="CirclePointColor" format="color"/> //小圆环颜色
+    </declare-styleable>
+</resources>

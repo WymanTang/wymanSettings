@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/MenuMainRecItemLayout"
+    android:focusable="true"
+    android:padding="16dp"
+
+    >
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/orange"
+        android:id="@+id/MenuMainRecBack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuMainRecItemName"
+        android:textColor="@color/white"
+        android:includeFontPadding="false"
+        app:layout_marginLeftPercent="3%"
+        app:layout_marginTopPercent="5%"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuMainRecItemIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuMainRecItemSub"
+        android:visibility="invisible"
+        />
+</android.support.percent.PercentRelativeLayout>

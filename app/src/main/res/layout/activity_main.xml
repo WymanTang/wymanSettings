@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goke.settings.MainActivity"
+    android:background="@drawable/colorbackground1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:id="@+id/ActivityMainMenuFocus"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MainActivityTitleIcon"
+        android:background="@drawable/ic_settings"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginTopPercent="5%"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MainActivityTitleText"
+        android:layout_toRightOf="@id/MainActivityTitleIcon"
+        android:layout_alignBottom="@id/MainActivityTitleIcon"
+        android:text="@string/settings"
+        android:textColor="@color/white"
+        app:layout_marginLeftPercent="1%"
+        android:includeFontPadding="false"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        app:layout_heightPercent="0.2%"
+        android:background="@color/white"
+        android:layout_below="@id/MainActivityTitleIcon"
+        app:layout_marginTopPercent="0.5%"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        app:layout_widthPercent="90%"
+        app:layout_heightPercent="37%"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/MainActivityRec"/>
+</android.support.percent.PercentRelativeLayout>

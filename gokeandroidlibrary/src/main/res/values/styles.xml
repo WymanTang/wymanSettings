@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- <item name="android:listDivider">@drawable/divider</item> -->
+    </style>
+
+    <style name="AppThemeTrans" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- <item name="android:listDivider">@drawable/divider</item> -->
+        <!-- <item name="android:background">@color/translucent</item> -->
+        <item name="android:windowBackground">@color/translucent</item>
+        <!-- <item name="android:windowIsTranslucent">true</item> -->
+    </style>
+</resources>

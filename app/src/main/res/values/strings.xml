@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">settings</string>
+    <string name="display_settings">display_settings</string>
+    <string name="dpi">dpi_settings</string>
+    <string name="screen_scope">screen_scope_settings</string>
+    <string name="tv">tv</string>
+    <string name="left_top">left|top</string>
+    <string name="ok_str">OK Change Focus</string>
+    <string name="right_bottom">right|bottom</string>
+    <string name="not_support_notice">selected is not support, set to back</string>
+    <string name="exit_ask">Are you sure to switch it</string>
+    <string name="info">Prompt</string>
+    <string name="sure">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="dialog_summary_virtual_screen">It will reboot your system. Are you sure?</string>
+</resources>

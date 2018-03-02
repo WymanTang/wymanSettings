@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gokeandroidlibrary/gokeandroidlibrary.iml" filepath="$PROJECT_DIR$/gokeandroidlibrary/gokeandroidlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/settings.iml" filepath="$PROJECT_DIR$/settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wymanSettings.iml" filepath="$PROJECT_DIR$/wymanSettings.iml" />
     </modules>
   </component>
 </project>
